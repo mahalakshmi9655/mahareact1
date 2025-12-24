@@ -1,4 +1,140 @@
-function App()
+import { useState } from 'react'
+import React from 'react'
+const App = () => {
+  const[name,setName]=useState("---")
+  const dis=(event)=>
+{
+   setName(event.target.value)
+}
+const show=(v)=>
+{
+  console.log(v)
+
+}
+const find=(v1,v2)=>
+{
+  console.log(v1+v2)
+}
+
+  return (
+    <div>
+      <form>
+      <input type='text' value={name} onChange={dis} placeholder='ender user name'></input><br></br>
+      <input type='password'onChange={()=>show("1234")} placeholder='ender passwd'></input><br></br>
+      <input type='number' onChange={()=>find(12,24)} placeholder='ender accno'></input><br></br>
+      <input type='email' placeholder='ender email'></input><br></br>
+      <input type='date' placeholder='dob' name='dob'></input><br></br>
+      <input type='time' name='time'></input><br></br>
+      <label>select gender</label>
+      <input type='radio'name='gender'></input>Male
+      <input type='radio'name='gender'></input>Female
+      <input type='radio'name='gender'></input>others<br></br>
+      <select>
+        <option selected>selected month</option>
+        <option>cse</option>
+        <option>EEE</option>
+        <option>civil</option>
+        <option>mech</option>
+       </select><br></br>
+      
+      <label>Select course:</label>
+      <input type='checkbox' name='c1'></input>c
+      <input type='checkbox' name='c2'></input>c++
+      <input type='checkbox' name='c3'></input>java
+      <input type='checkbox' name='c4'></input>python
+      <input type='checkbox' name='c5'></input>none of this above<br></br>
+      <label>Type your Address:</label>
+      <textarea rows="7" col="25"></textarea><br></br>
+      <label>choose on file</label>
+      <input type='file'></input>
+      <label>list box:</label>
+      <select size="7" multiple>
+      <option>sunday</option>
+      <option>monday</option>
+      <option>tuesday</option>
+      <option>wednesday</option>
+      <option>thursday</option>
+      <option>friday</option>
+      <option>saturday</option>
+      </select><br></br>
+      <label>progress bar 90% complete</label>
+      <progress style={{backgroundColor:"green",border:"2px solid blue"}} min="0" max="100"></progress><br></br>
+      <label>volume</label>
+      <input type="range" min="0" max="6"></input><br></br>
+      <input type='submit'></input>🎁🎂💕💕😘😘
+
+       </form>
+  
+  
+    </div>
+  )
+}
+
+export default App
+
+
+
+
+/*function App(props)
+{  var a=props.data.rno
+  var b=props.data.sname
+  var c=props.data.issingle
+  var d=props.data.mark
+  var e=props.data.hobbies
+  return(<>
+       <h3>type of rno:{typeof(a)}</h3>
+        <h3>type of sname:{typeof(b)}</h3>
+         <h3>type of issingle:{typeof(c)}</h3>
+          <h3>type of mark:{typeof(d)}</h3>
+           <h3>type of hobbies:{typeof(e)}</h3>
+           <h3>{Array.isArray(d)?"it is array":"it is object json"}</h3>
+           <h3>{Array.isArray(e)?"it is array":"it is object json"}</h3>
+  </>)
+}
+export default App
+import parse from 'html-react-parser'
+function App(props)
+{
+  var ans=""
+  for(var s in props.data)
+  {
+    ans=ans+`<li>${s}=${props.data[s]}</li>`
+    console.log(s)
+  }
+  return(<>
+    {parse("<ol>"+ans+"</ol>")}
+  </>)
+}
+export default App
+
+/*import React from "react";
+import parse from "html-react-parser"
+class App extends  React.Component
+{
+  constructor(props)
+  {
+    var ans=""
+    super(props)
+    for(var s in props.data)
+    {
+      ans=ans+`<li>${s}=${props.data[s]}<br></br></li>`
+      console.log(s)
+    }
+
+    this.state={res:"<ol type='I'>"+ans+"</ol>"}
+  }
+  render()
+  {
+    return(<>
+        <h1>combine react state+props</h1>
+        {parse(this.state.res)}
+        <div id="res"></div>
+        
+    </>)
+  }
+}
+export default App
+/*function App()
 {
   if(true)
   {
