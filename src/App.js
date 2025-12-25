@@ -1,4 +1,26 @@
-import { useState } from 'react'
+function App()
+{
+  var arr=[20,30,40,50,60]
+  var [v1,,v2,...v3]=arr
+  return(<>
+     <h1>display array</h1>
+    <h3>index 0: {arr[0]}</h3>
+    <h3>index 1: {arr[1]}</h3> 
+    <h3>index 2: {arr[2]}</h3>
+    <h3>index 2: {arr[2]}</h3>
+    <h3>index 3: {arr[3]}</h3>
+    
+    
+    <h1>spread operator</h1>
+   <h3>index 0:{v1}</h3>
+   <h3>index 1:{v2}</h3>
+   <h3>index 2:{v3}</h3>
+
+  </>)
+}
+export default App
+
+/*import { useState } from 'react'
 import React from 'react'
 const App = () => {
   const[name,setName]=useState("---")
