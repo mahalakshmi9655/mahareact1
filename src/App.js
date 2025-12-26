@@ -1,4 +1,78 @@
+import Maha from "./Mycomponenents/Maha";
 function App()
+{
+  return(<>
+   <Maha/>
+   <h2> This is default App component</h2>
+  </>)
+}
+export default App
+
+
+
+/*function App()
+{
+  var arr=[11,22,33,77,112,30,12,45]
+  var s=0;
+  var ma=arr[0];
+  var order=arr
+  return(<>
+  <h1>React loop map method </h1>
+  <h2>old model</h2>
+  {arr[0]}
+   {arr[1]}
+    {arr[2]}
+     {arr[3]}
+      {arr[4]}
+       {arr[5]}
+        {arr[6]}
+        <h2>new model map(loop)</h2>
+        {arr.map((v)=><>{v}</>)}
+        <h2>New model map(next line)</h2>
+        {arr.map((v)=><>{v}<br></br></>)}
+        <h2>Number method</h2>
+        <ol>
+          {arr.map((v)=><li>{v}</li>)}
+        </ol>
+        <h2>Sum of the Array</h2>
+        {arr.map((v)=><>{s=s+v}</>)}
+        <h3>Sum of Array:{s}</h3>
+        
+        <div style={{display:"none"}}>
+        {arr.map((v)=><>{ma<=v && <>{ma=v}</>}</>)}
+        </div>
+        <h3>maximum of array:{ma}</h3>
+        
+        <div style={{display:"none"}}>
+          {arr.map((v)=><>{ma>v && <>{ma=v}</>}</>)}
+          </div>
+          <h3>minimum of array:{ma}</h3>
+         <div style={{display:"none"}}>{order.sort((x,y)=>(x-y))}</div>
+         <h2>Acending order</h2>
+         {order.map((v)=><>{v}+<br></br></>)}
+         <div style={{display:"none"}}> {order.sort((x,y)=>(y-x))}</div>
+         <h2>Decending order</h2>
+        {order.map((v)=><>{v},</>)}
+        <div >{order.push(788)}</div>
+        {order.map((v)=><>{v}+<></>)}
+        <h3>Adding element in array</h3>
+
+
+
+
+
+        
+        
+        </>)
+}
+export default App
+
+
+
+
+
+
+/*function App()
 {
   var arr=[20,30,40,50,60]
   var [v1,,v2,...v3]=arr
@@ -19,7 +93,6 @@ function App()
   </>)
 }
 export default App
-
 /*import { useState } from 'react'
 import React from 'react'
 const App = () => {
@@ -114,7 +187,7 @@ export default App
   </>)
 }
 export default App
-import parse from 'html-react-parser'
+/*import parse from 'html-react-parser'
 function App(props)
 {
   var ans=""
