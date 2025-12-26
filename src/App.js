@@ -1,12 +1,75 @@
-import Maha from "./Mycomponenents/Maha";
+import React, { useEffect, useState } from 'react'
+
+const App = () => {
+  const [name,setName]=useState("maha🎂🎂")
+  useEffect(()=>{
+    document.title=`hello ${name}`
+
+  })
+  const dis1=()=>{
+    setTimeout(()=>{
+      setName("Family number")
+    },3000)
+  }
+
+  const dis=()=>{
+    setName("1.prasanth 2.jishnu")
+  }
+  
+  
+return (
+    <div>
+      <h1>UseEffect Hook</h1>
+      <button onClick={dis}>Change Name</button>
+      <button onClick={dis1}>next</button><br></br>
+      {name}
+    </div>
+  )
+}
+
+export default App
+
+/*import { useState } from "react"
 function App()
 {
+  const[count,setCount]=useState(0)
+  const show=(event)=>{
+    setCount(parseInt(event.target.value)+1)
+
+  }
+  return(
+  <div>
+   <button  onClick={show} value={count}> clicked :{count}times </button>
+
+
+   
+  </div>)
+}
+export default App
+/*import { useState } from "react"
+function App()
+{
+  const[count,setCount]=useState(100)
+  const show=(event)=>{
+    if(event.target.id==="s1")
+    setCount(count+1)
+  if(event.target.id==="s2")
+    setCount(count-1)
+  if(event.target.id==="s3")
+    setCount(count-5)
+  }
+  
+  
   return(<>
-   <Maha/>
-   <h2> This is default App component</h2>
+  <button  id="s1"onClick={show}>Increment by 1</button>
+  <button  id="s2"onClick={show}>Decrement by 1</button>
+  <button  id="s3"onClick={show}> Decrement by 5</button>
+  <h2>{count}</h2>
   </>)
 }
 export default App
+
+
 
 
 
