@@ -1,4 +1,24 @@
-import React, { useEffect, useState } from 'react'
+
+import "./App.css"
+import myimg from "./image/flower.jpg"
+function App()
+{
+  return(
+     <div id="outer" align="center">
+    <div id="inner">
+     <img  id="flo"src={myimg} width="100"height="auto"alt="path is wrong"></img>
+     <h1>ADMIN PANNAL</h1>
+     <input type="text" placeholder="enter your name"></input>
+     <input type="password" placeholder="enter paswrd"></input>
+     <button>Login</button>
+     </div>
+     </div>
+     )
+  
+}
+export default App
+
+/*import React, { useEffect, useState } from 'react'
 
 const App = () => {
   const [name,setName]=useState("maha🎂🎂")
@@ -15,16 +35,14 @@ const App = () => {
   const dis=()=>{
     setName("1.prasanth 2.jishnu")
   }
-  
-  
-return (
+    return (
     <div>
       <h1>UseEffect Hook</h1>
       <button onClick={dis}>Change Name</button>
       <button onClick={dis1}>next</button><br></br>
       {name}
     </div>
-  )
+         )
 }
 
 export default App

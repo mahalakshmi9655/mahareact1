@@ -1,4 +1,4 @@
-.App {
+/*.App {
   text-align: center;
 }
 
@@ -35,4 +35,79 @@
   to {
     transform: rotate(360deg);
   }
+}*/
+#outer
+{
+box-shadow:5px 10px 15px 10px blue;
+border-radius: 50px;
+width: 50%;
+background-color: gray;
+transform:translate(50%,50%)
 }
+input,button
+{
+  display: block;
+  margin-bottom:40px;
+}
+input{
+  width:75%;
+  border:none;
+  outline:none;
+  text-align:center;
+  font-size:30px;
+  border-bottom: 2px solid black;
+  background-color: transparent;
+}
+h1{
+  background-color: black;
+  color:white;
+}
+button{
+  padding: 15px;
+  font-size:25px;
+  border-radius: 15px;
+  font-size:30px;
+  
+  
+}
+button:hover
+{
+  cursor:pointer;
+  color:red;
+  border:3px dotted red;
+  outline:4px solid black;
+  background-color:aqua;
+
+}
+img {
+  animation-name:maha;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+@keyframes maha
+{
+  from{
+    transform:rotate(0deg);
+  }
+  to{
+    transform:rotate(360deg)
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
